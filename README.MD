@@ -38,3 +38,17 @@ babel.config.json 파일 생성 후 아래 코드 입력
 ```
 
 babel 사용을 위해선 node server.js 식이 아닌 babel-node server 로 사용
+
+#### Prisma
+
+> npm install prisma -D
+> npm install @prisma/client
+> npx prisma init
+
+migrate
+
+> npx prisma migrate dev
+
+studio
+
+> npx prisma studio

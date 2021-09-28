@@ -7,6 +7,7 @@ Instaclone Backend.
 #### GraphQL
 
 > npm i graphql
+> npm install graphql-tools@7.0.2
 
 #### Apollo-Server
 

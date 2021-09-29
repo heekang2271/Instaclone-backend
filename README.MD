@@ -2,11 +2,24 @@
 
 Instaclone Backend.
 
+## To-do List
+
+### User:
+
+-   [ ] Create Account
+-   [ ] See Profile
+-   [ ] Login
+-   [ ] Edit Proflie
+-   [ ] Follow User
+-   [ ] Unfollow User
+-   [ ] Change Avatar (Image Upload)
+
 ## Set up
 
 #### GraphQL
 
 > npm i graphql
+
 > npm install graphql-tools@7.0.2
 
 #### Apollo-Server
@@ -43,7 +56,9 @@ babel 사용을 위해선 node server.js 식이 아닌 babel-node server 로 사
 #### Prisma
 
 > npm install prisma -D
+
 > npm install @prisma/client
+
 > npx prisma init
 
 migrate
@@ -53,3 +68,7 @@ migrate
 studio
 
 > npx prisma studio
+
+#### dotenv
+
+> npm install dotenv

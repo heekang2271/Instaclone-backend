@@ -8,5 +8,7 @@ const server = new ApolloServer({ schema });
 server
     .listen()
     .then(() =>
-        console.log(`Server is running on localhost:${process.env.PORT}/`)
+        console.log(
+            `Server is running on http://localhost:${process.env.PORT}/`
+        )
     );

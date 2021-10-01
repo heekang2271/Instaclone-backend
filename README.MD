@@ -6,13 +6,13 @@ Instaclone Backend.
 
 ### User:
 
--   [ ] Create Account
--   [ ] See Profile
--   [ ] Login
--   [ ] Edit Proflie
+-   [x] Create Account
+-   [x] See Profile
+-   [x] Login
+-   [x] Edit Proflie
+-   [x] Change Avatar (Image Upload)
 -   [ ] Follow User
 -   [ ] Unfollow User
--   [ ] Change Avatar (Image Upload)
 
 ## Set up
 
@@ -25,6 +25,9 @@ Instaclone Backend.
 #### Apollo-Server
 
 > npm i apollo-server@2.25.2
+> npm i apollo-server-express@2.19
+> npm i express
+> npm i morgan
 
 #### Nodemon
 
@@ -46,9 +49,9 @@ node.js로 실행하는 경우, 문법 발전속도가 javascript보다 떨어�
 babel.config.json 파일 생성 후 아래 코드 입력
 
 ```
-    {
-        "presets": ["@babel/preset-env"]
-    }
+{
+    "presets": ["@babel/preset-env"]
+}
 ```
 
 babel 사용을 위해선 node server.js 식이 아닌 babel-node server 로 사용
@@ -72,3 +75,23 @@ studio
 #### dotenv
 
 > npm install dotenv
+
+#### file upload
+
+아폴로에 파일 업로드시 stack maximum 관련 에러가 나면
+package.json에 추가
+
+```
+"resolutions": {
+    "fs-capacitor": "^6.2.0",
+    "graphql-upload": "^11.0.0"
+}
+```
+
+package.json의 scripts에 아래 내용 추가
+
+```
+"preinstall": "npx npm-force-resolutions",
+```
+
+이 후 node_modules 폴더 삭제하고 npm install

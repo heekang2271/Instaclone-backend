@@ -30,8 +30,6 @@ export default {
                 process.env.SECRET_KEY
             );
 
-            console.log(token);
-
             return {
                 ok: true,
                 token,

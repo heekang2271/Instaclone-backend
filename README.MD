@@ -9,10 +9,25 @@ Instaclone Backend.
 -   [x] Create Account
 -   [x] See Profile
 -   [x] Login
--   [x] Edit Proflie
+-   [x] Edit Profile
 -   [x] Change Avatar (Image Upload)
--   [ ] Follow User
--   [ ] Unfollow User
+-   [x] Follow User
+-   [x] Unfollow User
+-   [x] See Followers w/ Pagination
+-   [x] See Following w/ Pagination
+-   [x] Computed Fields
+-   [x] Search Users
+
+### Photos
+
+-   [ ] Upload Photo (Parse #)
+-   [ ] See Photo
+-   [ ] See Hashtags
+-   [ ] Search Photos
+-   [ ] Edit Photo
+-   [ ] Like / Unlike Photo
+-   [ ] See Photo Likes
+-   [ ] See Feed
 
 ## Set up
 
@@ -91,7 +106,7 @@ package.json에 추가
 package.json의 scripts에 아래 내용 추가
 
 ```
-"preinstall": "npx npm-force-resolutions",
+"preinstall": "npx npm-force-resolutions@0.0.3",
 ```
 
 이 후 node_modules 폴더 삭제하고 npm install

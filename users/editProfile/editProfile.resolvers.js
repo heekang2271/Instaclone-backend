@@ -1,9 +1,7 @@
-import { createReadStream, createWriteStream } from "fs";
+import { createWriteStream } from "fs";
 import client from "../../client";
 import bcrypt from "bcrypt";
 import { protectedResolver } from "../users.utils";
-
-process;
 
 const resolverFn = async (
     _,
@@ -22,7 +20,7 @@ const resolverFn = async (
         let avatarUrl = null;
         if (avatar) {
             const { filename, createReadStream } = await avatar;
-            const newFilename = `${loggedInUser.id}-${Date.now()}-${filename}`
+            const newFilename = `${loggedInUser.id}-${Date.now()}-${filename}`;
             const readStream = createReadStream();
             const writeStream = createWriteStream(
                 `${process.cwd()}/uploads/${newFilename}/`
@@ -46,7 +44,7 @@ const resolverFn = async (
                 email,
                 bio,
                 ...(uglyPassword && { password: uglyPassword }),
-                ...(avatarUrl && {avatar: avatarUrl})
+                ...(avatarUrl && { avatar: avatarUrl }),
             },
         });
 

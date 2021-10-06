@@ -9,7 +9,7 @@ export const getUser = async (token) => {
             return null;
         }
         const { id } = await jwt.verify(token, process.env.SECRET_KEY);
-        const user = await await client.user.findUnique({ where: { id } });
+        const user = await client.user.findUnique({ where: { id } });
 
         if (user) {
             return user;

@@ -61,11 +61,16 @@ node.js로 실행하는 경우, 문법 발전속도가 javascript보다 떨어�
 
 > npm install @babel/node --save-dev
 
+> npm install @babel/cli --dev-only
+
+> npm install --save-dev @babel/plugin-transform-runtime
+
 babel.config.json 파일 생성 후 아래 코드 입력
 
 ```
 {
     "presets": ["@babel/preset-env"]
+    "plugins": ["@babel/plugin-transform-runtime"]
 }
 ```
 
@@ -110,3 +115,9 @@ package.json의 scripts에 아래 내용 추가
 ```
 
 이 후 node_modules 폴더 삭제하고 npm install
+
+## deploy
+
+### heroku
+
+set up: https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up

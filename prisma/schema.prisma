@@ -34,7 +34,7 @@ model Photo {
   file      String
   caption   String?
   hashtags  Hashtag[]
-  likes      Like[]
+  likes     Like[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 }
@@ -42,7 +42,7 @@ model Photo {
 model Hashtag {
   id        Int       @id @default(autoincrement())
   hashtag   String    @unique
-  photos     Photo[]
+  photos    Photo[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 }

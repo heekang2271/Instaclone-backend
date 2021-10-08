@@ -27,7 +27,23 @@ Instaclone Backend.
 -   [x] Edit Photo
 -   [x] Like / Unlike Photo
 -   [x] See Photo Likes
+-   [x] See Photo Comments
 -   [x] See Feed
+-   [x] Is Mine (Delete Photo)
+
+### Comments
+
+-   [x] Comment on Photo
+-   [x] Is Mine (Delete Comment)
+-   [x] Edit Comment
+
+### Refactor
+
+-   [x] Mutation Responses
+
+### Extras
+
+-   [x] S3 Image Upload
 
 ## Set up
 
@@ -98,6 +114,8 @@ studio
 
 #### file upload
 
+> npm install graphql-upload@latest
+
 아폴로에 파일 업로드시 stack maximum 관련 에러가 나면
 package.json에 추가
 
@@ -115,6 +133,10 @@ package.json의 scripts에 아래 내용 추가
 ```
 
 이 후 node_modules 폴더 삭제하고 npm install
+
+#### AWS
+
+> npm i aws-sdk
 
 ## deploy
 

@@ -1,4 +1,5 @@
 import client from "../../client";
+import { uploadToS3 } from "../../shared/sheard.utils";
 import { protectedResolver } from "../../users/users.utils";
 import { processHashtags } from "../photos.utils";
 
@@ -8,10 +9,12 @@ const resolverFn = async (_, { file, caption }, { loggedInUser }) => {
         // parse caption
         hashtagObj = processHashtags(caption);
     }
+
+    const fileUrl = await uploadToS3(file, loggedInUser.id, "uploads");
     // get or create Hashtags
     return await client.photo.create({
         data: {
-            file,
+            file: fileUrl,
             caption,
             user: {
                 connect: {
